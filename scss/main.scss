@@ -96,7 +96,7 @@ section, footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
         background-color: $fondo;
-        height: auto;
+        height: fit-content;
         gap: 52px;
         padding-top: 200px;
         padding-bottom: 48px;
@@ -132,13 +132,28 @@ section, footer {
                 border: none;
                 border-radius: 8px;
                 width: 50%;
-                height: auto;
+                min-height: 60%;
+                height: fit-content;
                 font-size: 1.5em;
                 font-weight: bold;
-                padding: 12px;
+                padding: 0 12px;
                 cursor: pointer;
+                align-self: flex-end;
             }
-
+            
+            #inicio-der {
+                display: grid;
+                align-items: center;
+                justify-items:  right;
+                width: 100%;
+                margin: 0;
+            }
+            
+            #inicio-der img {
+                width: 80%;
+                height: 100%;
+                object-fit: cover;
+            }
 // main
 
     // servicios
@@ -500,6 +515,7 @@ section, footer {
                         font-size: 1.5em;
                         font-weight: bold;
                         width: 50%;
+                        cursor: pointer;
                     }
 
 // footer
@@ -518,8 +534,8 @@ footer{
 
         #footer-sub-1 {
             display: grid;
-            justify-content: start;
-            gap: 36px;
+            place-content: start;
+            gap: 30px;
         }
 
             #footer-sub-1 figure{
@@ -548,4 +564,7 @@ footer{
     
     footer div:nth-child(2) {
         text-align: center;
+        padding-top: 20px;
+        border-top: solid 1px black;
     }
+    
