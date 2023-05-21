@@ -25,12 +25,15 @@ section {
         display: flex;
         justify-content: space-between;
         height: 150px;
+        width: 100%;
         align-items: center;
         background-color: $white;
-        padding: 0 10vw;
+        position: fixed;
+        box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.1);
     }
 
         .left-navbar {
+            padding-left: 10vw;
             display: flex;
             align-items: center;
         }
@@ -63,6 +66,7 @@ section {
             }
 
         .right-navbar {
+            padding-right: 10vw;
             align-items: center;
             display: flex;
         }
@@ -94,7 +98,7 @@ section {
         background-color: $fondo;
         height: auto;
         gap: 52px;
-        padding-top: 20px;
+        padding-top: 200px;
         padding-bottom: 48px;
     }
 
@@ -132,6 +136,7 @@ section {
                 font-size: 1.5em;
                 font-weight: bold;
                 padding: 12px;
+                cursor: pointer;
             }
 
 // main
@@ -238,4 +243,92 @@ section {
             font-size: 1.5em;
             font-weight: bold;
             padding: 12px;
+            cursor: pointer;
         }
+
+    // por qué tomar nuestro servicios
+    
+    #por-que-tomar-nuestros-servicios {
+        display: flex;
+        flex-direction: column;
+        background-color: $fondo;
+        text-align: center;
+        align-items: center;
+    }
+
+        #pqtns-text h2{
+            color: $naranjaSisu;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        #pqtns-text p{
+            display: inline-block;
+            color: $grey;
+            width: 50%;
+            font-size: 1em;
+            font-weight: bold;
+            text-align: justify;
+        }
+
+    #pqtns-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    #pqtns-content figure {
+        width: min-content;
+        height: min-content;
+        margin: 0 0 0 100px;
+    }
+
+    #pqtns-content figure img {
+        border-radius: 30px;
+        width: 28vw;
+        height: 28vw;
+        object-fit:cover;
+    }
+
+    #pqtns-content ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        height: 100%;
+        padding: 0;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+    #pqtns-content ul li {
+        display: flex;
+    }
+
+    #pqtns-content ul li hr {
+        width: 2px;
+        background-color: $black;
+        border: none;
+        border-radius: 50%;
+        height: 50px;
+        margin: 0;
+    }
+
+    #pqtns-content h3 {
+        margin-top: 0;
+        color: $azulSisu;
+        font-weight: bold;
+        font-size: calc(1em + 4px);
+    }
+
+    #pqtns-content ul p {
+        margin-bottom: 0;
+        color: $grey;
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    #pqtns-content ul div {
+        padding-left: 20px;
+    }
