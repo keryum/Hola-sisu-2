@@ -149,7 +149,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px;
+  padding-top: 150px;
   background-color: white;
 }
 
@@ -351,7 +351,7 @@ nav {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 150px;
   background-color: white;
   padding-bottom: 50px;
 }
@@ -383,6 +383,7 @@ nav {
 
 #quienes-somos {
   display: flex;
+  padding-top: 150px;
   flex-direction: column;
 }
 
