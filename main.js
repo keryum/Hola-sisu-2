@@ -8,13 +8,21 @@ const servicios = document.querySelector('#servicios')
 const nosotros = document.querySelector('#quienes-somos')
 const metodologia = document.querySelector('#como-trabajamos')
 const contacto = document.querySelector('#contactanos')
+const prev = document.querySelector('.prev')
+const next = document.querySelector('.next')
+const slider = document.querySelector('#servicios-cards-container')
 
 inicioNav.addEventListener('click', scrollToInicio);
 serviciosNav.addEventListener('click', scrollToServicios);
 nosotrosNav.addEventListener('click', scrollToNosotros);
 metodologiaNav.addEventListener('click', scrollToMetodologia)
 contactoNav.addEventListener('click', scrollToContacto)
-
+prev.addEventListener('click', () => {
+    slider.scrollLeft -=300
+});
+next.addEventListener('click', () => {
+    slider.scrollLeft +=300
+});
 
 function scrollToServicios() {
     servicios.scrollIntoView()

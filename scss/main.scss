@@ -23,6 +23,7 @@ section, footer {
     // navbar
     nav {
         display: flex;
+        z-index: 100;
         justify-content: space-between;
         height: 150px;
         width: 100%;
@@ -89,6 +90,10 @@ section, footer {
             .redes-sociales a:nth-child(3) img {
                 width: 20px;
             }
+
+        .mobile-navbar {
+            display: none;
+        }
 
     // inicio
 
@@ -181,15 +186,46 @@ section, footer {
             text-align: center;
         }
 
+        .container-servicios-scroll {
+            position: relative;
+        }
+
+        .control {
+            width: 50px;
+            cursor: pointer;
+            z-index: 3;
+            background-color:#00000050;
+            border-radius: 50%;
+            display: none;
+        }
+
+        .prev {
+            position: absolute;
+            top: 50%;
+            rotate: 90deg;
+            left: -30px;
+        }
+
+        .next {
+            position: absolute;
+            top: 50%;
+            right: -30px;
+            rotate: -90deg;
+        }
+
         #servicios-cards-container {
             display: grid;
+            position: relative;
             width: 100vw;
             grid-template-columns: repeat(4, 1fr);
             justify-content: center;
+            background-color: #2424240e;
         }
+
 
             .card-servicios {
                 text-align: center;
+                z-index: 2;
             }
 
                 .card-servicios h3 {
@@ -251,6 +287,7 @@ section, footer {
 
         #programa-una-cita-de-valoracion button {
             width: 20%;
+            min-width: 202px;
             border: none;
             border-radius: 8px;
             height: auto;
@@ -303,11 +340,11 @@ section, footer {
     }
 
         #pqtns-content figure {
-            width: min-content;
-            height: min-content;
-            margin: 0 40px 0 0;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0;
+            padding: 0 40px 0 0;
             height: 100%;
-            aspect-ratio: 1/1;
             justify-self: flex-end;
         }
 
@@ -336,7 +373,7 @@ section, footer {
         #pqtns-content ul div {
             padding-left: 20px;
             border-left: solid black 2px;
-            width: 60%;
+            width: 100%;
         }
 
             #pqtns-content h3 {
@@ -383,13 +420,16 @@ section, footer {
             border: solid black 1px;
             border-radius: 10px;
             padding: 40px 100px;
+            justify-content: center;
         }
 
             #ct-list-container ol {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 text-align: start;
+                list-style-position: inside;
                 gap: 20px 50px;
+                padding-left: 0;
             }
 
     #quienes-somos {
@@ -470,6 +510,10 @@ section, footer {
                 background-color: $naranjaSisu;
             }
 
+                #c-izq {
+                    padding-right: 50px;
+                }
+
                     #c-izq span:nth-child(1) {
                         font-size: 1em;
                         color: $white;
@@ -493,6 +537,7 @@ section, footer {
 
                 #c-der {
                     display: grid;
+                    grid-template-rows: repeat(3, 1fr) 0.5fr;
                 }
 
                     #c-der input {
@@ -513,9 +558,11 @@ section, footer {
                         border-radius: 5px;
                         border: none;
                         color: $white;
+                        height: 60px;
                         font-size: 1.5em;
                         font-weight: bold;
                         width: 50%;
+                        min-width: 202px;
                         cursor: pointer;
                     }
 
@@ -569,3 +616,189 @@ footer{
         border-top: solid 1px black;
     }
     
+    @media (max-width: 1250px) {
+
+        .left-navbar {
+            padding-left: 20px;
+        }
+        .right-navbar {
+            padding-right: 20px;
+        }
+        section {
+            padding: 0 20px;
+        }
+        #inicio-der img {
+            width: 100%;
+        }
+
+        .control {
+            display: block;
+        }
+
+        #servicios-cards-container {
+            width: 90vw;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            justify-content: start;
+        }
+
+        .card-servicios {
+            width: 40vw;
+        }
+    }
+
+    @media (max-width: 1050px) {
+        .middle-navbar, .right-navbar {
+            display: none;
+        }
+        nav {
+            justify-content: center;
+            z-index: 10;
+        }
+        .left-navbar {
+            padding: 0;
+        }
+        .mobile-navbar {
+            position: fixed;
+            z-index: 5;
+            top: 100px;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            background-color: $white;
+        }
+        .mobile-middle-navbar {
+            display: grid;
+        }
+
+        .mobile-middle-navbar ul {
+            display: grid;
+            padding: 0;
+            place-content: center;
+            margin: 0;
+            height: 100%;
+            font-family: $font-stack;
+            font-size: xx-large;
+            color: $azulSisu;
+            gap: 5vh;
+        }
+
+        .mobile-middle-navbar li{
+            list-style: none;
+            text-align: center;
+            gap: 50px;
+            display: grid;
+        }
+        .mobile-redes-sociales {
+            justify-content: center;
+        }
+        .mobile-redes-sociales a img{
+            width: 50px !important;
+            height: 50px;
+        }
+
+        #pqtns-content {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto;
+        }
+
+        #pqtns-content ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 80%;
+            grid-row: 1/2;
+        }
+        
+        #pqtns-content ul div{
+            width: 100%;
+        }
+
+        #pqtns-content figure{
+            display: grid;
+            grid-row: 2/2;
+            justify-content: center;
+            margin: 0;
+            height: 50vw;
+            padding-top: 50px;
+            padding-right: 0;
+            justify-self: center;
+        }
+
+        #pqtns-content figure img{
+            width: 70vw;
+            height: 50vw;
+        }
+
+        #contactanos {
+            padding: 50px;
+        }
+}
+
+@media (max-width: 850px){
+    #inicio {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding-left: 50px ;
+        padding-right: 50px;
+    }
+
+    #inicio button {
+        justify-self: start;
+    }
+
+    #inicio-der {
+        height: 30vh;
+    }
+
+    #inicio img {
+        width: 100%;
+        height: 50%;
+        justify-self: center;
+        align-self: start;
+    }
+
+    .card-servicios {
+        width: 60vw;
+    }
+
+    #pqtns-text {
+        width: 100%;
+    }
+
+    #pqtns-text h2 {
+        width: 100%;
+    }
+
+    #pqtns-content ul{
+        width: 100%;
+        justify-self: center;
+    }
+
+    #pqtns-content ul li div {
+        padding: 0;
+        border: 0;
+    }
+
+    #ct-list-container {
+        padding: 40px;
+    }
+
+    #quienes-somos-div {
+        flex-direction: column;
+    }
+
+    #contactanos {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #contactanos button {
+        justify-self: center;
+    }
+    
+        footer div:nth-child(1) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat (4, 1fr);
+            padding-bottom: 50px;
+        }
+}
