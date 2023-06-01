@@ -14,6 +14,7 @@
 <body>
     <header>
         <nav>
+            <img class="mobile-navbar-open-btn" src="./iconos/pngwing.com (9).png" alt="">
             <div class="left-navbar">
                 <figure>
                     <img src="./logo/HolaSisuDefinitivo15.png" alt="logoHolaSISU">
@@ -45,31 +46,35 @@
                 </div>
             </div>
         </nav>
-        <aside class="mobile-navbar">
-            <div class="mobile-middle-navbar">
-                <ul id="lista-nav">
-                    <li id="inicio-nav">Inicio</li>
-                    <li id="servicios-nav">Servicios</li>
-                    <li id="nosotros-nav">Nosotros</li>
-                    <li id="metodologia-nav">Metodología</li>
-                    <li id="contacto-nav">Contacto</li>
-                    <li>
-                        <div class="mobile-redes-sociales">
-                            <a href="https://www.facebook.com/profile.php?id=100092586049058">
-                                <img src="./iconos/pngegg (6) (1).png" alt="IconoFacebook">
-                            </a>
-                            <a href="">
-                                <img src="./iconos/pngegg (13).png" alt="IconoLinkedIn">
-                            </a>
-                            <a href="https://www.instagram.com/holasisu_/">
-                                <img src="./iconos/pngegg (12).png" alt="IconoInstagram">
-                            </a>
-                            <a href="https://twitter.com/HolaSisu_">
-                                <img src="./iconos/pngegg (2) (1).png" alt="IconoTwitter">
-                            </a>
-                        </div>
-                </ul>
-                </li>
+        <aside class="mobile-navbar inactive">
+            <div class="mobile-navbar-container">
+
+                <img class="mobile-navbar-close-btn" src="./iconos/pngwing.com (8).png" alt="">
+                <div class="mobile-middle-navbar">
+                    <ul id="lista-nav">
+                        <li id="inicio-nav" onclick="scrollToInicio()">Inicio</li>
+                        <li id="servicios-nav" onclick="scrollToServicios()">Servicios</li>
+                        <li id="nosotros-nav" onclick="scrollToNosotros()">Nosotros</li>
+                        <li id="metodologia-nav" onclick="scrollToMetodologia()">Metodología</li>
+                        <li id="contacto-nav" onclick="scrollToContacto()">Contacto</li>
+                        <li>
+                            <div class="mobile-redes-sociales">
+                                <a href="https://www.facebook.com/profile.php?id=100092586049058">
+                                    <img src="./iconos/pngegg (6) (1).png" alt="IconoFacebook">
+                                </a>
+                                <a href="">
+                                    <img src="./iconos/pngegg (13).png" alt="IconoLinkedIn">
+                                </a>
+                                <a href="https://www.instagram.com/holasisu_/">
+                                    <img src="./iconos/pngegg (12).png" alt="IconoInstagram">
+                                </a>
+                                <a href="https://twitter.com/HolaSisu_">
+                                    <img src="./iconos/pngegg (2) (1).png" alt="IconoTwitter">
+                                </a>
+                            </div>
+                    </ul>
+                    </li>
+                </div>
             </div>
         </aside>
         <section id="inicio" class="inicio-scroll">

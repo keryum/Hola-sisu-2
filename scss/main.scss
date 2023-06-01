@@ -10,6 +10,10 @@ $font-stack: 'Merriweather', serif;
     font-family: $font-stack;
 }
 
+.inactive {
+    display: none;
+}
+
 body {
     margin: 0;
 }
@@ -37,6 +41,10 @@ section, footer {
             padding-left: 10vw;
             display: flex;
             align-items: center;
+        }
+
+        .mobile-navbar-open-btn {
+            display: none;
         }
 
         .left-navbar figure {
@@ -91,9 +99,57 @@ section, footer {
                 width: 20px;
             }
 
-        .mobile-navbar {
-            display: none;
-        }
+            .mobile-navbar-container {
+                position: fixed;
+                z-index: 20;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                background-color: $white;
+                display: grid;
+            }
+    
+            .mobile-middle-navbar ul {
+                display: grid;
+                padding: 0;
+                place-content: center;
+                margin: 0;
+                height: 100%;
+                font-family: $font-stack;
+                font-size: xx-large;
+                color: $azulSisu;
+                gap: 5vh;
+            }
+    
+            .mobile-navbar-close-btn {
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                width: 10vw;
+                cursor: pointer;
+            }
+    
+            .mobile-middle-navbar li{
+                list-style: none;
+                text-align: center;
+                gap: 50px;
+                display: grid;
+                cursor: pointer;
+            }
+            .mobile-redes-sociales {
+                justify-content: center;
+            }
+    
+            .mobile-redes-sociales a{
+                text-decoration: none;
+            }
+    
+            .mobile-redes-sociales a img{
+                width: 50px !important;
+                height: 50px;
+            }
+    
 
     // inicio
 
@@ -609,6 +665,7 @@ footer{
 
                     #footer-sub-1 figure img{
                         width: 15vw;
+                        min-width: 120px;
                     }
         
         #footer-quick-links h3, #footer-services h3, #footer-contacto h3 {
@@ -667,55 +724,37 @@ footer{
             display: none;
         }
         nav {
+            position: relative;
             justify-content: center;
             z-index: 10;
             height: auto;
         }
+
+        section, inicio {
+            padding-top: 50px !important;
+        }
+
         .left-navbar {
             padding: 0;
+        }
+
+        .mobile-navbar-open-btn {
+            display: block;
+            align-self: center;
+            position: absolute;
+            left: 20px;
+            width: 5vw;
+            min-width: 25px;
+            cursor: pointer;
         }
         
         .left-navbar figure img {
             width: 30vw;
         }
 
-        .mobile-navbar {
-            position: fixed;
-            z-index: 5;
-            top: 100px;
-            width: 100%;
-            height: 100vh;
-            justify-content: center;
-            background-color: $white;
-        }
-        .mobile-middle-navbar {
-            display: grid;
-        }
-
-        .mobile-middle-navbar ul {
-            display: grid;
-            padding: 0;
-            place-content: center;
-            margin: 0;
-            height: 100%;
-            font-family: $font-stack;
-            font-size: xx-large;
-            color: $azulSisu;
-            gap: 5vh;
-        }
-
-        .mobile-middle-navbar li{
-            list-style: none;
-            text-align: center;
-            gap: 50px;
-            display: grid;
-        }
-        .mobile-redes-sociales {
-            justify-content: center;
-        }
-        .mobile-redes-sociales a img{
-            width: 50px !important;
-            height: 50px;
+        #pucdv-text {
+            width: auto;
+            padding: 0 20px;
         }
 
         #pqtns-content {
@@ -756,14 +795,10 @@ footer{
 }
 
 @media (max-width: 850px){
+
     #inicio {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
-        padding-top: 20vw;
-    }
-
-    section {
-        padding-top: 20vw !important;
     }
 
     #inicio button {
@@ -815,6 +850,10 @@ footer{
         border: 0;
     }
 
+    #pqtns-content figure img {
+        width: 100%;
+    }
+
     #ct-list-container {
         padding: 10px;
     }
@@ -832,6 +871,15 @@ footer{
 
     #contactanos button {
         justify-self: center;
+    }
+
+    #c-izq {
+        padding: 0;
+        text-align: center;
+    }
+
+    #c-izq figure {
+        display: none;
     }
 
     #c-der {
@@ -852,4 +900,31 @@ footer{
             grid-template-rows: repeat (4, 1fr);
             padding-bottom: 50px;
         }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 1.5em !important;
+    }
+
+    h2 {
+        font-size: 1.3em !important;
+    }
+
+    button {
+        font-size: 1.3em !important;
+    }
+
+    #inicio-izq button {
+        justify-self: center;
+        min-width: 170px;
+    }
+
+    #pucdv-text span:nth-child(2) {
+        font-size: 2em;
+    }
+
+    #c-izq span:nth-child(2) {
+        font-size: 1.8em;
+    }
 }
