@@ -158,6 +158,7 @@ section, footer {
                 width: 80%;
                 height: 100%;
                 object-fit: cover;
+                border-radius: 14px;
             }
 // main
 
@@ -220,6 +221,18 @@ section, footer {
             grid-template-columns: repeat(4, 1fr);
             justify-content: center;
             background-color: #2424240e;
+            padding-top: 20px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+        }
+
+        #servicios-cards-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        #servicios-cards-container::-webkit-scrollbar-thumb {
+            background-color: $azulSisu;
+            border-radius: 8px;
         }
 
 
@@ -263,6 +276,7 @@ section, footer {
             text-align: center;
             gap: 32px;
             background-color: $naranjaSisu;
+            margin-bottom: 50px;
         }
 
         #pucdv-text {
@@ -307,6 +321,7 @@ section, footer {
         background-color: $fondo;
         text-align: center;
         align-items: center;
+        padding-bottom: 50px;
     }
 
         #pqtns-text {
@@ -654,10 +669,16 @@ footer{
         nav {
             justify-content: center;
             z-index: 10;
+            height: auto;
         }
         .left-navbar {
             padding: 0;
         }
+        
+        .left-navbar figure img {
+            width: 30vw;
+        }
+
         .mobile-navbar {
             position: fixed;
             z-index: 5;
@@ -738,8 +759,11 @@ footer{
     #inicio {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
-        padding-left: 50px ;
-        padding-right: 50px;
+        padding-top: 20vw;
+    }
+
+    section {
+        padding-top: 20vw !important;
     }
 
     #inicio button {
@@ -747,18 +771,30 @@ footer{
     }
 
     #inicio-der {
-        height: 30vh;
+        height: auto;
     }
 
     #inicio img {
         width: 100%;
-        height: 50%;
+        height: 100%;
         justify-self: center;
         align-self: start;
     }
 
     .card-servicios {
         width: 60vw;
+    }
+
+    .control {
+        width: 30px;
+    }
+
+    .next {
+        right: -20px;
+    }
+
+    .prev {
+        left: -20px;
     }
 
     #pqtns-text {
@@ -780,7 +816,7 @@ footer{
     }
 
     #ct-list-container {
-        padding: 40px;
+        padding: 10px;
     }
 
     #quienes-somos-div {
@@ -789,11 +825,26 @@ footer{
 
     #contactanos {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+        padding: 20px;
+        border-radius: 16px;
     }
 
     #contactanos button {
         justify-self: center;
+    }
+
+    #c-der {
+        height: fit-content;
+        gap: 20px;
+    }
+
+    #c-der input {
+        height: 40px;
+    }
+
+    #c-der button {
+        height: 40px;
     }
     
         footer div:nth-child(1) {
