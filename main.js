@@ -22,12 +22,19 @@ metodologiaNav.addEventListener('click', scrollToMetodologia);
 contactoNav.addEventListener('click', scrollToContacto);
 mobileNavbarOpenBtn.addEventListener('click', showMobileNavbar);
 mobileNavbarCloseBtn.addEventListener('click', closeMobileNavbar);
+window.addEventListener('resize', closeMobileNavbarWidth);
 prev.addEventListener('click', () => {
     slider.scrollLeft -=300
 });
 next.addEventListener('click', () => {
     slider.scrollLeft +=300
 });
+
+function closeMobileNavbarWidth() {
+    if (window.innerWidth > 1050) {
+        closeMobileNavbar()
+}
+}
 
 function showMobileNavbar() {
     mobileNavbar.classList.toggle('inactive')
