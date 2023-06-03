@@ -563,7 +563,7 @@ nav {
   font-weight: bold;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
 #que-es-hola-sisu p, #que-significa-sisu p {
