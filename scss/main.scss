@@ -33,7 +33,7 @@ section, footer {
         width: 100%;
         align-items: center;
         background-color: $white;
-        position: fixed;
+        position: relative;
         box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.1);
     }
 
@@ -159,7 +159,7 @@ section, footer {
         background-color: $fondo;
         height: fit-content;
         gap: 52px;
-        padding-top: 200px;
+        padding-top: 50px;
         padding-bottom: 48px;
     }
 
@@ -221,7 +221,15 @@ section, footer {
 .icono-whatsapp img {
     position: fixed;
     z-index: 40;
-    width: 56px;
+    width: 80px;
+    bottom: 100px;
+    right: 20px;
+}
+
+.icono-llamada img {
+    position: fixed;
+    z-index: 40;
+    width: 80px;
     bottom: 20px;
     right: 20px;
 }
@@ -232,7 +240,7 @@ section, footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 150px;
+        padding-top: 50px;
         background-color: $white;
     }
 
@@ -245,7 +253,6 @@ section, footer {
 
         #servicios-p {
             font-size: 1em;
-            font-weight: bold;
             margin-top: 0;
             margin-bottom: 48px;
             text-align: center;
@@ -314,7 +321,8 @@ section, footer {
                 .card-servicios p {
                     text-align: justify;
                     color: $grey;
-                    padding: 20px;
+                    padding: 16px 20px;
+                    margin: 0;
                 }
         
                 .card-servicios figure {
@@ -478,7 +486,7 @@ section, footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-top: 150px;
+        padding-top: 50px;
         background-color: $white;
         padding-bottom: 50px;
     }
@@ -496,24 +504,28 @@ section, footer {
             }
     
         #ct-list-container {
+            display: grid;
             border: solid black 1px;
             border-radius: 10px;
             padding: 40px 100px;
             justify-content: center;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
             #ct-list-container ol {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
                 text-align: start;
                 list-style-position: inside;
                 gap: 20px 50px;
                 padding-left: 0;
+                margin: 0;
+                justify-content: space-between;
             }
 
     #quienes-somos {
         display: flex;
-        padding-top: 150px;
+        padding-top: 50px;
         flex-direction: column;
     }
 
@@ -608,14 +620,21 @@ section, footer {
                     }
 
                     #c-izq span:nth-child(3) {
-                        font-size: 1em;
+                        font-size: larger;
                         color: $white;
-                        font-weight: 500;
+                        font-weight: bold;
                         margin-bottom: 24px;
+                        margin-bottom: 0;
                     }
 
                     #c-izq p {
                         color: $white;
+                    }
+
+                    #c-izq p:nth-child(4){
+                        font-size: larger;
+                        font-weight: bold;
+                        margin-bottom: 0;
                     }
 
                 #c-der {
@@ -699,8 +718,21 @@ footer{
         }
 
         #footer-contacto a {
+            display: inline-flex;
             text-decoration: none;
             color: $black;
+        }
+
+        #footer-contacto ul li img {
+            width: 20px;
+            align-self: center;
+            justify-self: center;
+            margin-right: 5px;
+        }
+
+        #footer-contacto li {
+            display: inline-flex;
+            align-content: center;
         }
     
     footer div:nth-child(2) {
